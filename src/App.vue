@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <global-header/>
     <router-view/>
+    <global-footer/>
   </div>
 </template>
 
 <script>
+import GlobalHeader from '@/components/globals/GlobalHeader'
+import GlobalFooter from '@/components/globals/GlobalFooter'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { GlobalHeader, GlobalFooter }
 }
 </script>
 
@@ -17,7 +22,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

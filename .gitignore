@@ -17,5 +17,3 @@ selenium-debug.log
 *.sln
 
 env.tmp
-dev.env.js
-prod.env.js
