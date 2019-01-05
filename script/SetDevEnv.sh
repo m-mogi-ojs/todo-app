@@ -18,6 +18,6 @@ for valName in $(seq 1 ${#ENV_VAL_LIST[@]}); do
   envVueValName=${VUE_ENV_VAL_LIST[$valName-1]}
   value=$(grep $envValName $ENV_TMP | awk -F '["]' '{print $2}')
   echo "==========================="
-  sed -i -e "s@\(  ${envVueValName}: '\)\(.*\)\('.*\)@\1${value}\3@" $ENV_FILE
+  sed -i -e "s@\(  ${envVueValName}: '\)\(.*\)\('.*\)@\1\"${value}\"\3@" $ENV_FILE
   echo "==========================="
 done
