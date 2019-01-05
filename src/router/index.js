@@ -8,6 +8,7 @@ import SignIn from '@/components/pages/SignIn'
 Vue.use(Router)
 
 let router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -26,7 +27,7 @@ let router = new Router({
       component: SignIn
     },
     {
-      path: '/',
+      path: '*',
       redirect: { name: 'SignIn' }
     }
   ]
