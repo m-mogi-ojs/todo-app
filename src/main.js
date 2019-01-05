@@ -9,16 +9,6 @@ import Firebase from 'firebase'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
-
-Vue.use(Buefy)
-
 /* eslint-disable */
 const firebaseConfig = {
   apiKey:             process.env.VUE_APP_FIREBASE_API_KEY,
@@ -28,4 +18,15 @@ const firebaseConfig = {
   storageBucket:      process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId:  process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID
 }
+
 Firebase.initializeApp(firebaseConfig)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+
+Vue.use(Buefy)

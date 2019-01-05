@@ -17,3 +17,6 @@ selenium-debug.log
 *.sln
 
 env.tmp
+config/prod.env.js
+
+.firebase
