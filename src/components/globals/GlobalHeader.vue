@@ -2,7 +2,8 @@
   <section class="hero is-dark is-bold">
     <div class="hero-body">
       <h1>
-        <router-link to="/">GlobalHeader</router-link>
+        <router-link to="/">トップへ  </router-link>
+        <router-link to="/service">サービスへ  </router-link>
       </h1>
     </div>
   </section>
