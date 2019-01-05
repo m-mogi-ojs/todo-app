@@ -34,7 +34,8 @@ let router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(record => record.meta.requireAuth)
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  console.log(requiresAuth)
   if (requiresAuth) {
     // このルートはログインされているかどうか認証が必要です。
     // もしされていないならば、ログインページにリダイレクトします。

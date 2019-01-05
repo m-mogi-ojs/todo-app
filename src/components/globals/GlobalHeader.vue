@@ -2,7 +2,7 @@
   <section class="hero is-dark is-bold">
     <div class="hero-body">
       <h1>
-        global-header
+        <router-link to="/">GlobalHeader</router-link>
       </h1>
     </div>
   </section>
