@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Firebase from 'firebase'
+import Firebase from 'firebase/app'
+import 'firebase/auth'
 import Service from '@/components/pages/Service'
 import Top from '@/components/pages/Top'
 import SignUp from '@/components/pages/SignUp'

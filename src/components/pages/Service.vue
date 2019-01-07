@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Firebase from 'firebase'
+import Firebase from 'firebase/app'
 
 export default {
   name: 'Main',
