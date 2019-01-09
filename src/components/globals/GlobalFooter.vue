@@ -1,11 +1,11 @@
 <template>
-  <section class="hero is-dark is-bold">
+  <footer class="hero is-dark is-bold">
     <div class="hero-body">
       <h1>
-        global-footer
+        Email:m.mogi.ojs@gmail.com
       </h1>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script>
