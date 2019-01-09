@@ -4,7 +4,7 @@
       <h2>
         アカウント登録フォーム
       </h2>
-      <input type="text" placeholder="Username" v-model="username">
+      <input type="text" placeholder="Email" v-model="username">
       <input type="password" placeholder="Password" v-model="password">
       <button class="button is-info" @click="signUp">登録</button>
       <div>
