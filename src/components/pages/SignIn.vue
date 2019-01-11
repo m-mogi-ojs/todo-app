@@ -29,7 +29,7 @@ export default {
     signIn: function () {
       Firebase.auth().signInWithEmailAndPassword(this.username, this.password)
         .then(user => {
-          this.$router.push(this.$route.query.redirect ? this.$route.query.redirect : '/')
+          this.$router.push(this.$route.query.redirect ? this.$route.query.redirect : '/service')
         })
         .catch(error => {
           alert(error.message)
