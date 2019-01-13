@@ -20,6 +20,7 @@ const firebaseConfig = {
 }
 
 Firebase.initializeApp(firebaseConfig)
+Firebase.auth().setPersistence(Firebase.auth.Auth.Persistence.LOCAL)
 
 /* eslint-disable no-new */
 new Vue({

@@ -29,7 +29,7 @@ router.beforeEach((to, from, next) => {
       } else {
         // 認証情報がない場合はログインページへリダイレクト
         next({
-          path: '/sign-in',
+          name: 'SignIn',
           query: { redirect: to.fullPath }
         })
       }
