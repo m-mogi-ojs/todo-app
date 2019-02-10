@@ -5,6 +5,7 @@
         <router-link to="/">トップへ  </router-link>
         <router-link to="/service">サービスへ  </router-link>
         <button v-if="isSigned" class="button is-info" @click="signOut">ログアウト</button>
+        <div class="user-name">{{ name }}</div>
       </h1>
     </div>
   </section>
@@ -15,6 +16,11 @@ import Firebase from 'firebase/app'
 
 export default {
   name: 'GlobalHeader',
+  data () {
+    return {
+      name: Firebase.auth().currentUser ? Firebase.auth().currentUser.email : ''
+    }
+  },
   methods: {
     signOut: function () {
       Firebase.auth().signOut().then(() => {
@@ -30,7 +36,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.button {
+.button, .user-name {
   float: right;
 }
+
 </style>

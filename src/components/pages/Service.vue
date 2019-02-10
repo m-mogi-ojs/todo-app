@@ -1,22 +1,47 @@
 <template>
-  <section class="hero is-light is-fullheight">
-    <div class="hero-body">
-      <div>{{ name }}</div>
-      <button class="button is-info" @click="signOut">ログアウト</button>
-      <router-link to="/sign-in">sign in</router-link>
-      <router-link to="/sign-up">sign up</router-link>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="tags">
+            <span class="tag">aaaa</span>
+            <span class="tag is-dark">bbbb</span>
+          </div>
+          <todo-card v-bind:task="task" v-for="task in tasks" v-bind:key="task.name"/>
+        </div>
+        <div class="column">
+          <div class="tags">
+            <span class="tag">aaaa</span>
+            <span class="tag is-dark">bbbb</span>
+          </div>
+          <todo-card v-bind:task="task" v-for="task in tasks" v-bind:key="task.name"/>
+        </div>
+        <div class="column">
+          <div class="tags">
+            <span class="tag">aaaa</span>
+            <span class="tag is-dark">bbbb</span>
+          </div>
+          <todo-card v-bind:task="task" v-for="task in tasks" v-bind:key="task.name"/>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import Firebase from 'firebase/app'
+import TodoCard from '@/components/component/TodoCard'
 
 export default {
-  name: 'Main',
+  name: 'Service',
   data () {
     return {
-      name: Firebase.auth().currentUser ? Firebase.auth().currentUser.email : ''
+      name: Firebase.auth().currentUser ? Firebase.auth().currentUser.email : '',
+      tasks: [
+        { id: 0, name: 'task1', status: 1 },
+        { id: 1, name: 'task2', status: 2 },
+        { id: 2, name: 'task3', status: 3 }
+      ]
     }
   },
   methods: {
@@ -25,6 +50,9 @@ export default {
         this.$router.push('/sign-in')
       })
     }
+  },
+  components: {
+    TodoCard
   }
 }
 </script>
